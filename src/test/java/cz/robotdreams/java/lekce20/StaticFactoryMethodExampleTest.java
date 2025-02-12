@@ -14,7 +14,7 @@ public class StaticFactoryMethodExampleTest {
     @Test
     public void throwError() {
         assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(
-                () -> StaticFactoryMethodExample.create("Some name")
+                () -> StaticFactoryMethodExample.create("Some")
         ).withMessage("Invalid internal name");
     }
 

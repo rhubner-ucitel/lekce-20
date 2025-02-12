@@ -9,6 +9,7 @@ public interface SimpleIterator<E> {
 
 
     static <T> SimpleIterator<T> arrayInterator(T[] array) {
+
         return new SimpleIterator() {
             int i = 0;
             @Override
@@ -23,6 +24,8 @@ public interface SimpleIterator<E> {
                 return o;
             }
         };
+
+
     }
 
     static <T> SimpleIterator<T> listInterator(List<T> list) {

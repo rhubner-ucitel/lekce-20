@@ -5,6 +5,7 @@ public class StaticFactoryMethodExample {
     private final String internalName;
 
     private StaticFactoryMethodExample(String internalName) {
+        // super( predani parametru   )
         this.internalName = internalName;
     }
 

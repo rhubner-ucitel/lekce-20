@@ -1,14 +1,31 @@
 package cz.robotdreams.java.lekce20.mvc;
 
+import java.util.Map;
 import java.util.Scanner;
 
 public class Controller {
 
     private UzivatelView uzivatelView;
+    // Pristum do DB pres DAO.
+
 
     public Controller(UzivatelView uzivatelView) {
         this.uzivatelView = uzivatelView;
     }
+
+    //@Get("/search") ${header}
+    //                ${Uzivatel.jmeno} -> uzivatel.getJmeno()
+//    public String zpracujPozadavek(Map<String, Object> model, String queryParameter) {
+//        ///dotaz do DB
+//        if( test zda mame data ){
+//            model.put("header", "Vysledek vyhledavani");
+//            model.put("Uzivatel", new Uzivatel("Jan", "Novak"));
+//            return "zobrazDetail";
+//        } else {
+//            return "redirect:notFound";
+//        }
+//    }
+
 
     public void zpracujPozadavek() {
         Scanner c = new Scanner(System.in);
@@ -21,7 +38,7 @@ public class Controller {
 
         uzivatelView.zobrazUzivatele(u);
 
-        //uzivatelView.ulozUzivateleDoSouboru(u);
+        uzivatelView.ulozUzivateleDoSouboru(u);
 
     }
 

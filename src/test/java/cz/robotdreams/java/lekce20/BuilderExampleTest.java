@@ -9,6 +9,7 @@ public class BuilderExampleTest {
     public void simpleBuilder() {
         StringBuilder builder = new StringBuilder();
 
+
         builder.append("Ahoj")
                 .append("\n")
                 .append(10)
